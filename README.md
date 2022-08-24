@@ -23,8 +23,8 @@ Install node modules
 
 Database
 
-    I have used SQLite database which is included in the root. If you want to use a 
-    different database then update the settings.py and execute the following command to create tables.
+I have used SQLite database which is included in the root. If you want to use a 
+different database then update the settings.py and execute the following command to create tables.
 
     python manage.py migrate
 
@@ -39,8 +39,8 @@ If everything goes smooth the site will be up at http://127.0.0.1:8000/
 
 Local frontend development
 
-    The app uses compiled 'app/index.js' file. If you want to make any React code change you need to 
-    run the below command to see the changes in the app. 
+The app uses compiled 'app/index.js' file. If you want to make any React code change you need to 
+run the below command to see the changes in the app. 
 
     npm install --global yarn
     yarn serve
