@@ -21,6 +21,14 @@ Install node modules
     cd awesome_recipes
     npm install 
 
+Database
+
+    I have use SQLite database and its included in the repository. If you want to use a 
+    different database then execute the following command to create tables.
+
+    python manage.py migrate
+
+
 Run locally
 
     cd awesome_recipes
@@ -28,7 +36,6 @@ Run locally
 
 
 If everything goes smooth the site will be up at http://127.0.0.1:8000/
-
 
 Local frontend development
 
