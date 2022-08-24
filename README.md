@@ -2,6 +2,11 @@
 
 Recipe web app developed using React/Redux for frontend and Django rest framework for backend api.
 
+![screenshot1](/screenshots/screen1.png?raw=true)
+![screenshot2](/screenshots/screen2.png?raw=true)
+![screenshot3](/screenshots/screen3.png?raw=true)
+![screenshot4](/screenshots/screen4.png?raw=true)
+
 ## Requirements
 
 * Python 3.10
