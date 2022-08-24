@@ -60,6 +60,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         for instruction_data in instructions_data:
             Instruction.objects.update_or_create(recipe=instance, **instruction_data)
 
+        instance.categories.clear()
         for category in categories_data:
             instance.categories.add(category)
 

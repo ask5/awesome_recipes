@@ -79,6 +79,7 @@ function AddEditRecipe() {
             variant="standard"
             value={recipe.name}
             onChange={handleName}
+            inputProps={{ maxLength: 100 }}
           />
         </div>
         <div>
@@ -88,6 +89,7 @@ function AddEditRecipe() {
             maxRows={8}
             placeholder="Notes"
             onChange={handleNotes}
+            inputProps={{ maxLength: 500 }}
             value={recipe.notes}
             style={{ width: 600 }}
           />
@@ -99,6 +101,7 @@ function AddEditRecipe() {
             label="Serving Size"
             variant="standard"
             value={recipe.serving_size}
+            inputProps={{ maxLength: 4 }}
             onChange={handleServingSize}
           />
         </div>

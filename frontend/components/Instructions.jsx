@@ -31,6 +31,7 @@ function Instructions(props) {
         {props.editable && (
           <React.Fragment>
             <Input
+              inputProps={{ maxLength: 255 }}
               value={instruction}
               onChange={(e) => {
                 setInstruction(e.target.value);

@@ -32,6 +32,7 @@ function Ingredients(props) {
         {props.editable && (
           <>
             <Input
+              inputProps={{ maxLength: 255 }}
               value={ingredient}
               onChange={(e) => {
                 setIngredient(e.target.value);

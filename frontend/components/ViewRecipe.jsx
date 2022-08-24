@@ -26,10 +26,6 @@ function ViewRecipe() {
           <Stack spacing={2}>
             <h2>{recipe.name}</h2>
             <div>Serving Size: {recipe.serving_size}</div>
-            <Divider />
-            <DisplayCategories categories={recipe_category_names?.categories} />
-            <Ingredients editable={false} />
-            <Instructions editable={false} />
             {recipe.notes && (
               <div>
                 <Divider />
@@ -37,6 +33,10 @@ function ViewRecipe() {
                 <div>{recipe.notes}</div>
               </div>
             )}
+            <Divider />
+            <DisplayCategories categories={recipe_category_names?.categories} />
+            <Ingredients editable={false} />
+            <Instructions editable={false} />
           </Stack>
         </Box>
       )}
