@@ -1,5 +1,7 @@
 # awesome_recipes
 
+Recipe web app developed using React/Redux frontend and Django Rest framework as backend
+
 ## Requirements
 
 * Python 3.10
