@@ -23,7 +23,7 @@ Install node modules
 
 Database
 
-    I have use SQLite database and its included in the repository. If you want to use a 
+    I have used SQLite database which is included in the repository. If you want to use a 
     different database then execute the following command to create tables.
 
     python manage.py migrate
