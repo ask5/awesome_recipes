@@ -1,0 +1,33 @@
+{
+  "name": "awesome_recipes",
+  "packageManager": "yarn@3.2.2",
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.10.1",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.8",
+    "js-cookie": "^3.0.1",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "serve": "yarn && npx webpack --config=webpack.config.js --mode development --progress --watch",
+    "test": ""
+  }
+}

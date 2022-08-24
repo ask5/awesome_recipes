@@ -1,0 +1,36 @@
+# awesome_recipes
+
+## Requirements
+
+* Python 3.10
+* virtualenv
+* Node ^v16.16.0
+
+### Install project dependencies
+
+create virtualenv 
+
+    virtualenv recipe
+    source recipe/bin/activate
+    pip install -r awesome_recipes/requirements.txt
+
+Install node modules
+
+    cd awesome_recipes
+    npm install 
+
+Run locally
+
+    cd awesome_recipes
+    python manage.py runserver
+
+
+If everything goes smooth the site will be up at http://127.0.0.1:8000/
+
+
+Local frontend development
+
+    npm install --global yarn
+    yarn serve
+
+yarn serve command will build the react code. Files are watched and it will recompile automatically after any code change 
