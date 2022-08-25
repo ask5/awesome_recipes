@@ -86,7 +86,7 @@ function AddEditRecipe() {
             maxRows={8}
             placeholder="Notes"
             onChange={handleNotes}
-            inputProps={{ maxLength: 500 }}
+            maxLength={500}
             value={recipe.notes}
             style={{ width: 600 }}
           />
