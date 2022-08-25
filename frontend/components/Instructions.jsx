@@ -51,7 +51,7 @@ function Instructions(props) {
             </IconButton>
           </React.Fragment>
         )}
-        {recipe.instructions.length ? (
+        {recipe?.instructions?.length ? (
           <List dense disablePadding>
             {recipe?.instructions.map((item, index) => (
               <ListItem key={index}>

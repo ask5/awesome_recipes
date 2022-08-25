@@ -133,6 +133,9 @@ export const recipeSlice = createSlice({
         state.recipe.categories.splice(index, 1);
       }
     },
+    resetRecipe: (state, action) => {
+      state.recipe = initialState.recipe;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getCategories.fulfilled, (state, action) => {
@@ -191,6 +194,7 @@ export const {
   removeIngredient,
   selectCategory,
   deSelectCategory,
+  resetRecipe,
 } = recipeSlice.actions;
 
 export default recipeSlice.reducer;

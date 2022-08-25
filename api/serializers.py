@@ -25,6 +25,10 @@ class RecipeSerializer(serializers.ModelSerializer):
     instructions = InstructionSerializer(many=True, allow_null=True, required=False)
     ingredients = IngredientSerializer(many=True, allow_null=True, required=False)
 
+    def __init__(self, *args, **kwargs):
+        kwargs['partial'] = True
+        super(RecipeSerializer, self).__init__(*args, **kwargs)
+
     class Meta:
         model = Recipe
         fields = ['id', 'name', 'notes', 'serving_size', 'public', 'categories', 'ingredients', 'instructions',
@@ -45,6 +49,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         return recipe
 
     def update(self, instance, validated_data):
+        method = self.context.get('request').method
         categories_data = validated_data.pop('categories', [])
         ingredients_data = validated_data.pop('ingredients', [])
         instructions_data = validated_data.pop('instructions', [])
@@ -53,19 +58,20 @@ class RecipeSerializer(serializers.ModelSerializer):
         instance.serving_size = validated_data.get('serving_size', instance.serving_size)
         instance.public = validated_data.get('public', instance.public)
 
-        Ingredient.objects.filter(recipe=instance).delete()
-        Instruction.objects.filter(recipe=instance).delete()
+        if method != 'PATCH':
+            Ingredient.objects.filter(recipe=instance).delete()
+            Instruction.objects.filter(recipe=instance).delete()
         for ingredient_data in ingredients_data:
             Ingredient.objects.update_or_create(recipe=instance, **ingredient_data)
         for instruction_data in instructions_data:
             Instruction.objects.update_or_create(recipe=instance, **instruction_data)
 
-        instance.categories.clear()
+        if method != 'PATCH':
+            instance.categories.clear()
         for category in categories_data:
             instance.categories.add(category)
 
         instance.save()
-
         return instance
 
 

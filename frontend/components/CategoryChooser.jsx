@@ -14,6 +14,7 @@ import {
 function CategoryChooser({ selectedCategories }) {
   const dispatch = useDispatch();
   const { categories } = useSelector((state) => state["recipe"]);
+
   const handleCheck = (category, e) => {
     if (e.target.checked) dispatch(selectCategory(category.id));
     else dispatch(deSelectCategory(category.id));

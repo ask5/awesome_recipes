@@ -52,7 +52,7 @@ function Ingredients(props) {
             </IconButton>
           </>
         )}
-        {recipe.ingredients.length ? (
+        {recipe?.ingredients?.length ? (
           <List dense disablePadding>
             {recipe.ingredients.map((item, index) => (
               <ListItem key={index}>
