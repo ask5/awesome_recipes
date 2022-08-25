@@ -2,11 +2,6 @@
 
 Recipe web app developed using React/Redux for frontend and Django rest framework for backend api.
 
-![screenshot1](/screenshots/screen1.png?raw=true)
-![screenshot2](/screenshots/screen2.png?raw=true)
-![screenshot3](/screenshots/screen3.png?raw=true)
-![screenshot4](/screenshots/screen4.png?raw=true)
-
 ## Requirements
 
 * Python 3.10
@@ -42,6 +37,14 @@ different database then update the settings.py and execute the following command
 
 If everything goes smooth the site will be up at http://127.0.0.1:8000/
 
+## Django Unit testing
+
+    python manage.py test
+
+## Frontend testing
+
+    yarn test
+
 ## Local frontend development
 
 The app uses compiled 'app/index.js' file. If you want to make any React code change you need to 
@@ -50,4 +53,20 @@ run the below command to see the changes in the app.
     npm install --global yarn
     yarn serve
 
-yarn serve command will build the react code. Files are watched and it will recompile automatically after any code change 
+yarn serve command will build the React code. Files are watched, and it will recompile automatically 
+after any code change.
+
+## API Endpoints used by frontend
+
+    [GET, POST, PUT, PATCH, DELETE] /api/categories/
+    [GET, POST, PUT, PATCH, DELETE] /api/recipes/
+    [GET] /api/recipe_categories/
+    [GET, POST, PUT, PATCH, DELETE] /api/ingredients/
+    [GET, POST, PUT, PATCH, DELETE] /api/instructions/
+
+## Screenshots
+
+![screenshot1](/screenshots/screen1.png?raw=true)
+![screenshot2](/screenshots/screen2.png?raw=true)
+![screenshot3](/screenshots/screen3.png?raw=true)
+![screenshot4](/screenshots/screen4.png?raw=true)

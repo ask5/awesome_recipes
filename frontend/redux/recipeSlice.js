@@ -32,7 +32,7 @@ export const getCategories = createAsyncThunk(
 
 export const getPublicRecipes = createAsyncThunk(
   "get/public_recipes",
-  async (id) => {
+  async () => {
     return await RecipeService.getPublicRecipes();
   }
 );

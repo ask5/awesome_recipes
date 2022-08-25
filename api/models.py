@@ -19,6 +19,10 @@ class Recipe(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
+    # this is just used for testing
+    def is_public(self):
+        return "public" if self.public else "private"
+
 
 class Ingredient(models.Model):
     recipe = models.ForeignKey(Recipe, related_name='ingredients',  on_delete=models.CASCADE)

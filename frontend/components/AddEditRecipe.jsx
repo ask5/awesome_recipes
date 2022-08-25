@@ -49,9 +49,6 @@ function AddEditRecipe() {
       dispatch(setServingSize(e.target.value));
     }
   };
-  const handlePublic = (e) => {
-    dispatch(setPublic(e.target.checked));
-  };
 
   const handleSave = (e) => {
     if (recipe.name && recipe.serving_size) {
@@ -103,12 +100,6 @@ function AddEditRecipe() {
             value={recipe.serving_size}
             inputProps={{ maxLength: 4 }}
             onChange={handleServingSize}
-          />
-        </div>
-        <div>
-          <FormControlLabel
-            control={<Switch checked={recipe.public} onChange={handlePublic} />}
-            label="Public"
           />
         </div>
       </Stack>
