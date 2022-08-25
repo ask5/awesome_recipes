@@ -11,4 +11,9 @@
 #.pnp.*
 
 node_modules
-.DS_Store
+screenshots/.DS_Store
+.idea
+api/__pycache__
+app/__pycache__
+awesome_recipes/__pycache__
+.editorconfig
