@@ -3,8 +3,8 @@
  */
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Dashboard from "../frontend/components/Dashboard";
-import DisplayCategories from "../frontend/components/DisplayCategories";
+import Dashboard from "../components/Dashboard";
+import DisplayCategories from "../components/DisplayCategories";
 
 test("renders dashboard component", async () => {
   const { getByText } = render(<Dashboard />);
