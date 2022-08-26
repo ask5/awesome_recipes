@@ -1,6 +1,6 @@
 # awesome_recipes
 
-Recipe web app developed using React/Redux for frontend and Django rest framework for backend api.
+Recipe web app developed using React/Redux for frontend, and Django rest framework for backend api.
 
 ## Requirements
 
